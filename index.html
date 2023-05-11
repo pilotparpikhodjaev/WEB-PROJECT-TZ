@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Список товаров</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="scripts.js"></script>
+</head>
+<body>
+<h1>Список товаров</h1>
+<input type="text" id="filter" placeholder="Фильтр по названию">
+<button id="sort">Сортировать по цене</button>
+<table>
+    <tr>
+        <th>Название товара</th>
+        <th>Цена</th>
+    </tr>
+    <?php foreach($products as $product): ?>
+    <tr>
+        <td><?php echo $product['product_name']; ?></td>
+        <td><?php echo $product['price']; ?></td>
+    </tr>
+    <?php endforeach; ?>
+</table>
+</body>
+</html>
